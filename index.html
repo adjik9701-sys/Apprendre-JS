@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>verifier</title>
+</head>
+<body>
+
+    <h2>Vérifier si un nombre est premier</h2>
+
+    <form onsubmit="verifier(); return false;">
+        <label>Entrez un nombre :</label>
+        <input type="number" id="nombre" required>
+        <button type="submit">verifier</button>
+    </form>
+
+    <p id="resultat"></p>
+
+    <script>
+        function verifier() {
+           
+            let n = Number(document.getElementById("nombre").value);
+
+            let premier = true;
+            let res = document.getElementById("resultat");
+
+            if (n < 2) {
+                premier = false;
+            } else {
+                
+                if (n % 2 === 0 && n !== 2) {
+                    premier = false;
+                } else {
+                    let i = 3;
+                    while (i * i <= n && premier === true) {
+                        if (n % i === 0) {
+                            premier = false;
+                        }
+                        i += 2;
+                    }
+                }
+            }
+
+            
+            if (premier) {
+                res.textContent = n + " est un nombre premier.";
+            } else {
+                res.textContent = n + " n'est pas un nombre premier.";
+            }
+        }
+    </script>
+
+</body>
+</html>
