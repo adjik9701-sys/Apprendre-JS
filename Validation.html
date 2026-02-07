@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+</head>
+<body>
+    <label>Email :</label>
+    <input type="text" id="Email" required>
+    
+    <p>
+        <label>Telephone :</label>
+        <input type="number" id="Telephone" required>
+    </p>
+        
+    <label>Mot de Passe :</label>
+    <input type="text" id="MotDePasse" required> <br>
+    
+    <button id="Valider">Valider</button>
+
+   <script>
+
+        const emailRegExp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        const telephoneRegExp = /^(?:(?:\+|00)221|0)(70|76|77|78)[0-9]{7}$/;
+        const passwordRegExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+        
+        document.getElementById("Valider").addEventListener("click", function() {
+            console.log("bouton cliqué");
+          
+            const email = document.getElementById("Email").value;
+            const telephone = document.getElementById("Telephone").value;
+            const password = document.getElementById("MotDePasse").value;
+            
+            console.log("Email valide ?", emailRegExp.test(email));
+            console.log("Téléphone valide ?", telephoneRegExp.test(telephone));
+            console.log("Mot de passe valide ?", passwordRegExp.test(password));
+        });
+        document.body.style.backgroundColor = "red";
+        
+   </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
